@@ -3,10 +3,11 @@ namespace classes;
 
 class Character 
 {
-    public static $pv = 350;
+    protected $pv = 350;
     public $name;
     protected $lifePoints = 100;
     public $magicPoints = 10;
+    protected $level = 1;
 
     function __construct(string $name) {
         $this->name = $name;

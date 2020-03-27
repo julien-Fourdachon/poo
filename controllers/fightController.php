@@ -16,9 +16,6 @@ foreach ($_POST as $characterId) {
     array_push($_SESSION['fighters'], $character);
 }
 
-// var_dump($_SESSION);
-// die;
-
 $_SESSION['fighting'] = true;
 header('Location: /validation-julien-fourdachon');
 exit();

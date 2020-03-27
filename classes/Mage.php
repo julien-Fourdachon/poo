@@ -12,7 +12,7 @@ class Mage extends Character
 
     public function attack(Character $target) {
         $rand = rand(1, 2);
-        if ($rand == 1 || !$this->shield) {
+        if ($rand == 1) {
             $status = $this->fireball($target);
         } else if ($rand == 2) {
             $status = $this->shield();
@@ -21,6 +21,7 @@ class Mage extends Character
     }
 
     private function fireball(Character $target) {
+        $this->shield = False;
         $rand = rand(5, 10);
         if ($rand <= $this->magicPoints) {
             $atk = $rand*1.5;

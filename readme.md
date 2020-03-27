@@ -45,3 +45,12 @@ Bon chance!
 
 
 rajouter le dump de la base de données.
+
+
+Note: RAS je pense que tout c'est bien passé.
+
+Pour la bdd : 
+    HOST = 'localhost';
+    DBNAME = 'project';
+    USERNAME = 'root';
+    PASSWORD = '';

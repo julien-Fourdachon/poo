@@ -36,7 +36,7 @@ CREATE TABLE `characters` (
 
 LOCK TABLES `characters` WRITE;
 /*!40000 ALTER TABLE `characters` DISABLE KEYS */;
-INSERT INTO `characters` VALUES (1,'Warrior','Cloud'),(2,'Mage','Elminster');
+INSERT INTO `characters` VALUES (1,'Warrior','Cloud'),(2,'Mage','Elminster'),(3, 'Druid', 'Panoramix');
 /*!40000 ALTER TABLE `characters` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
