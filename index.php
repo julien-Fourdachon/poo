@@ -7,10 +7,10 @@ session_start();
 $characters = Database::getAllCharacter();
 
 if (isset($_SESSION['fighting'])) {
-    $class1 = '\classes\\' . $_SESSION['fighters'][0]['type'];
-    $class2 = '\classes\\' . $_SESSION['fighters'][1]['type'];
-    $player1 = new $class1($_SESSION['fighters'][0]['name]);
-    $player2 = new $class2($_SESSION['fighters'][1]['name']);
+    $name1 = '\classes\\' . $_SESSION['fighters'][0]['type'];
+    $name2 = '\classes\\' . $_SESSION['fighters'][1]['type'];
+    $player1 = new $name1($_SESSION['fighters'][0]['name]);
+    $player2 = new $name2($_SESSION['fighters'][1]['name']);
 }
 ?>
 

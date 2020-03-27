@@ -17,7 +17,7 @@ class Character
     }
 
     public function setLifePoints($dmg) {
-        $this->lifePoints -= round($dmg);
+        $this->lifePoints = round($dmg);
         if ($this->lifePoints < 0) {
             $this->lifePoints = 0;
         }
