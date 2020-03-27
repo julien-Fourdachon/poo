@@ -2,8 +2,8 @@
 
 class Database {
     const HOST = 'localhost';
-    const DBNAME = '';
-    const USERNAME = '';
+    const DBNAME = 'project';
+    const USERNAME = 'root';
     const PASSWORD = '';
     private static $obj;
 

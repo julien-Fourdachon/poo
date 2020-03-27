@@ -1,20 +1,23 @@
-<?php 
+<?php
+
 namespace classes;
 
-class Warrior extends Character
-{
-    private $boost = False;
+class Druid extends Character {
+
+    function __construct(string $name) {
+        parent::__construct($name);
+    }
 
     public function attack(Character $target) {
         $rand = rand(1, 10);
         if ($rand <= 8) {
-            return $this->sword($target);
+            return $this->stick($target);
         } else if ($rand > 8) {
             return $this->boost();
         }
     }
 
-    private function sword(Character $target) {
+    private function stick(Character $target) {
         $attack = rand(5, 15);
         if ($this->boost) {
             $rand = rand(17, 30);

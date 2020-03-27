@@ -1,17 +1,17 @@
-
+<?php
 include './classes/autoload.php';
 include './models/Database.php';
 
 session_start();
-
-$characters = Database::getAllCharacter();
+$characters = Database::getAllCharacters();
 
 if (isset($_SESSION['fighting'])) {
-    $name1 = '\classes\\' . $_SESSION['fighters'][0]['type'];
-    $name2 = '\classes\\' . $_SESSION['fighters'][1]['type'];
-    $player1 = new $name1($_SESSION['fighters'][0]['name]);
-    $player2 = new $name2($_SESSION['fighters'][1]['name']);
+    $type1 = '\classes\\' . $_SESSION['fighters'][0]['type'];
+    $type2 = '\classes\\' . $_SESSION['fighters'][1]['type'];
+    $player1 = new $type1($_SESSION['fighters'][0]['name']);
+    $player2 = new $type2($_SESSION['fighters'][1]['name']);
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -36,7 +36,7 @@ if (isset($_SESSION['fighting'])) {
                         <p>Joueur 1 :</p>
                         <?php foreach ($characters as $character): ?>
                             <li>
-                                <input type="radio" name="player1" value="<?= $character['id'] ?>">
+                                <input type="checkbox" name="player1" value="<?= $character['id'] ?>">
                                 <label for="<?= $character['type'] ?>"><?= $character['type'] ?></label><br>
                             </li>
                         <?php endforeach ?>
@@ -45,7 +45,7 @@ if (isset($_SESSION['fighting'])) {
                         <p>Joueur 2 :</p>
                         <?php foreach ($characters as $character): ?>
                             <li>
-                                <input type="radio" name="player2" value="<?= $character[id] ?>">
+                                <input type="checkbox" name="player2" value="<?= $character['id'] ?>">
                                 <label for="<?= $character['type'] ?>"><?= $character['type'] ?></label><br>
                             </li>
                         <?php endforeach ?>

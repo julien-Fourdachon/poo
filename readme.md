@@ -42,3 +42,6 @@ Vous allez donc devoir ajouter un nouveau type de personnage : le Druide (aka "D
 A vous de jouer!
 
 Bon chance!
+
+
+rajouter le dump de la base de données.
